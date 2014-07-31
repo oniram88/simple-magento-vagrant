@@ -44,7 +44,11 @@ apt-get -q -y install mysql-server-5.5
 
 mysql -u root -e "CREATE DATABASE IF NOT EXISTS magentodb"
 mysql -u root -e "GRANT ALL PRIVILEGES ON magentodb.* TO 'magentouser'@'localhost' IDENTIFIED BY 'password'"
+mysql -u root -e "GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' IDENTIFIED BY 'password'"
 mysql -u root -e "FLUSH PRIVILEGES"
+
+sed -i 's/bind-address            = 127.0.0.1/bind-address            = 0.0.0.0/g' /etc/mysql/my.cnf
+
 
 # Magento
 # --------------------
