@@ -36,11 +36,11 @@ Vagrant will configure the base system before downloading Magento and running th
 
 [Full Vagrant command documentation](http://docs.vagrantup.com/v2/cli/index.html)
 
-To connect from your prefered sql client use:
-host: 0.0.0.0
-user: root
-password: password
-port: 33060
+## To connect from your prefered sql client
+* host: 0.0.0.0
+* user: root
+* password: password
+* port: 33060
 
 ## Todo
 * Install Modman.
